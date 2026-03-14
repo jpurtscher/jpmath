@@ -1,1 +1,297 @@
-style
+/* ========================================
+   JP Math — style.css
+   Forest green, clean, welcoming
+   ======================================== */
+
+:root {
+  --green-900: #1A2F23;
+  --green-800: #1E3D2B;
+  --green-700: #2D5A3F;
+  --green-600: #3A7352;
+  --green-500: #4A8C65;
+  --green-400: #6BAD84;
+  --green-300: #8FB89F;
+  --green-200: #B5D9C4;
+  --green-100: #D6EBDF;
+  --green-50: #EBF5EF;
+
+  --white: #FFFFFF;
+  --gray-50: #F8F9FA;
+  --gray-100: #F1F3F5;
+  --gray-200: #E9ECEF;
+  --gray-400: #ADB5BD;
+  --gray-600: #6C757D;
+  --gray-800: #343A40;
+  --gray-900: #212529;
+}
+
+/* Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   Hero
+   ======================================== */
+
+.hero {
+  background: var(--green-700);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--green-200);
+  margin-bottom: 0.25rem;
+}
+
+.hero-location {
+  font-size: 0.875rem;
+  color: var(--green-300);
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn-primary {
+  display: inline-block;
+  background: var(--white);
+  color: var(--green-700);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-large {
+  font-size: 1rem;
+  padding: 0.875rem 2.5rem;
+}
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 1rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--green-800);
+  margin-bottom: 0.75rem;
+}
+
+.section-text {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ========================================
+   Subject Tags
+   ======================================== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--green-50);
+  color: var(--green-700);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  border: 1px solid var(--green-100);
+}
+
+/* ========================================
+   Pricing Cards
+   ======================================== */
+
+.pricing-cards {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.pricing-card {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.pricing-value {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--green-700);
+}
+
+.pricing-label {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  margin-top: 0.125rem;
+}
+
+/* ========================================
+   Details List
+   ======================================== */
+
+.details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details-list li {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.details-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-400);
+}
+
+/* ========================================
+   Contact
+   ======================================== */
+
+.phone-link {
+  color: var(--green-700);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--green-200);
+  transition: border-color 0.2s ease;
+}
+
+.phone-link:hover {
+  border-color: var(--green-700);
+}
+
+/* ========================================
+   CTA Section
+   ======================================== */
+
+.cta-section {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.cta-section .btn-primary {
+  background: var(--green-700);
+  color: var(--white);
+}
+
+.cta-section .btn-primary:hover {
+  background: var(--green-800);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+  background: var(--green-900);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8125rem;
+  color: var(--green-300);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 2rem 1.25rem 1rem;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+  }
+}
